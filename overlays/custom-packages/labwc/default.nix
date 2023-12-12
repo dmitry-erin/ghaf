@@ -5,6 +5,7 @@
 #
 (final: prev: {
   labwc = prev.labwc.overrideAttrs (prevAttrs: {
+  patches = [./labwc-colored-borders.patch];
     buildInputs = with final;
       [
         foot

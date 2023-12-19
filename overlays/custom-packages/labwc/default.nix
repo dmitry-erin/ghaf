@@ -5,7 +5,7 @@
 #
 (final: prev: {
   labwc = prev.labwc.overrideAttrs (prevAttrs: {
-  patches = [./labwc-colored-borders.patch];
+    patches = [./labwc-colored-borders.patch];
     buildInputs = with final;
       [
         foot
@@ -27,7 +27,7 @@
 
        substituteInPlace ../docs/menu.xml \
        --replace alacritty ${final.foot}/bin/foot
-       
+
        #frame coloring example
        substituteInPlace ../docs/rc.xml \
        --replace '</labwc_config>' \

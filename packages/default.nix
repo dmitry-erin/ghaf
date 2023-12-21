@@ -34,6 +34,7 @@
         #         in
         #           cfg.options;
       };
+      labwc = callPackage ./labwc {};
     };
   };
 }

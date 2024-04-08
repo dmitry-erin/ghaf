@@ -16,6 +16,7 @@
       kernel-hardening-checker = callPackage ./kernel-hardening-checker {};
       windows-launcher = callPackage ./windows-launcher {enableSpice = false;};
       windows-launcher-spice = callPackage ./windows-launcher {enableSpice = true;};
+      calculator = callPackage ./calculator {};
       doc = callPackage ../docs {
         revision = lib.strings.fileContents ../.version;
         # options = ;

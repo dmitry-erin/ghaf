@@ -19,4 +19,5 @@
   # launcher overlays
   networkmanagerapplet = import ./networkmanagerapplet {inherit prev;};
   htop = import ./htop {inherit prev;};
+  calculator = final.callPackage ../../packages/calculator {};
 })

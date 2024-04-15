@@ -61,6 +61,12 @@
         path = "${pkgs.openssh}/bin/ssh -i ${configH.ghaf.security.sshKeys.sshKeyPath} -o StrictHostKeyChecking=no zathura-vm.ghaf run-waypipe zathura";
         icon = "${../../assets/icons/png/pdf.png}";
       }
+      
+      {
+        name = "quickgui";
+        path = "${pkgs.openssh}/bin/ssh -i ${configH.ghaf.security.sshKeys.sshKeyPath} -o StrictHostKeyChecking=no quickgui-vm.ghaf run-waypipe quickgui";
+        icon = "${../../assets/icons/png/pdf.png}";
+      }
 
       {
         name = "windows";

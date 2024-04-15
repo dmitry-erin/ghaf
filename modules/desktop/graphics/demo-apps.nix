@@ -39,6 +39,7 @@ in {
     gala-app = mkProgramOption "Gala App" false;
     element-desktop = mkProgramOption "Element desktop" config.ghaf.graphics.enableDemoApplications;
     zathura = mkProgramOption "zathura" config.ghaf.graphics.enableDemoApplications;
+    quickgui = mkProgramOption "quickgui" config.ghaf.graphics.enableDemoApplications;
   };
 
   config = lib.mkIf config.ghaf.profiles.graphics.enable {
@@ -67,6 +68,11 @@ in {
         name = "zathura";
         path = "${pkgs.zathura}/bin/zathura";
         icon = "${pkgs.zathura}/share/icons/hicolor/32x32/apps/org.pwmt.zathura.png";
+      }
+      ++ lib.optional cfg.quickgui {
+        name = "quickgui";
+        path = "${pkgs.quickgui}/bin/quickgui";
+        #icon = "${pkgs.quickgui}/share/icons/hicolor/32x32/apps/org.pwmt.zathura.png";
       };
     environment.systemPackages =
       lib.optional cfg.chromium pkgs.chromium

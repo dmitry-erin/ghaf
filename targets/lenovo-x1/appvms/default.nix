@@ -5,8 +5,10 @@
   chromium = import ./chromium.nix {inherit pkgs;};
   gala = import ./gala.nix {inherit pkgs;};
   zathura = import ./zathura.nix {inherit pkgs;};
+  quickgui = import ./quickgui.nix {inherit pkgs;};
 in [
   chromium
   gala
   zathura
+  quickgui
 ]
